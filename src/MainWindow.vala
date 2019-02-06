@@ -1,6 +1,6 @@
 using Granite.Widgets;
 
-namespace PhpTester {
+namespace PythonTester {
 public class MainWindow : Gtk.Window {
 
     private SourceViewManager source_view_manager = SourceViewManager.get_instance ();

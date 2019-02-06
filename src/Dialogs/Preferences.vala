@@ -1,7 +1,7 @@
-namespace PhpTester {
+namespace PythonTester {
 public class Preferences : Gtk.Dialog {
 
-    private Settings settings = new Settings ("com.github.bartzaalberg.php-tester");
+    private Settings settings = new Settings ("com.github.bartzaalberg.python-tester");
     SourceViewManager source_view_manager = SourceViewManager.get_instance ();
     private Gtk.ComboBoxText style_scheme;
 
@@ -29,12 +29,12 @@ public class Preferences : Gtk.Dialog {
 
         var theme_label = new Gtk.Label (_("Theme:"));
 
-        var php_path_label = new Gtk.Label (_("PHP path:"));
-        var php_path_entry = new Gtk.Entry ();
-        php_path_entry.set_text (settings.get_string ("php-path"));
-        php_path_entry.set_tooltip_text (_("This path will be used to find php"));
+        var python_path_label = new Gtk.Label (_("Python path:"));
+        var python_path_entry = new Gtk.Entry ();
+        python_path_entry.set_text (settings.get_string ("python-path"));
+        python_path_entry.set_tooltip_text (_("This path will be used to find python"));
 
-        var restartNoteLabel = new Gtk.Label (_("You need to restart after changing the PHP path"));
+        var restartNoteLabel = new Gtk.Label (_("You need to restart after changing the Python path"));
 
         var close_button = new Gtk.Button.with_label (_("Close"));
         close_button.set_margin_end (6);
@@ -49,10 +49,10 @@ public class Preferences : Gtk.Dialog {
             source_view_manager.set_theme (settings.get_string ("style-scheme"));
             source_view_manager.set_font (settings.get_string ("font"));
 
-            if (php_path_entry.text == "") {
-                settings.set_string ("php-path", "/usr/bin");
+            if (python_path_entry.text == "") {
+                settings.set_string ("python-path", "/usr/bin");
             } else {
-                settings.set_string ("php-path", php_path_entry.text);
+                settings.set_string ("python-path", python_path_entry.text);
             }
 
             this.destroy ();
@@ -76,8 +76,8 @@ public class Preferences : Gtk.Dialog {
         general_grid.attach (use_custom_font_label, 0, 2, 1, 1);
         general_grid.attach (use_custom_font, 1, 2, 1, 1);
         general_grid.attach (select_font, 2, 2, 1, 1);
-        general_grid.attach (php_path_label, 0, 3, 1, 1);
-        general_grid.attach (php_path_entry, 1, 3, 1, 1);
+        general_grid.attach (python_path_label, 0, 3, 1, 1);
+        general_grid.attach (python_path_entry, 1, 3, 1, 1);
         general_grid.attach (restartNoteLabel, 1, 4, 1, 1);
 
         var main_grid = new Gtk.Grid ();

@@ -1,14 +1,14 @@
 using Granite.Widgets;
 
-namespace PhpTester {
+namespace PythonTester {
 public class HeaderBar : Gtk.HeaderBar {
 
     static HeaderBar? instance;
 
-    private Settings settings = new Settings ("com.github.bartzaalberg.php-tester");
+    private Settings settings = new Settings ("com.github.bartzaalberg.python-tester");
     private SourceViewManager source_view_manager = SourceViewManager.get_instance ();
     private FileManager file_manager = FileManager.get_instance ();
-    private PhpVersionManager php_version_manager = PhpVersionManager.get_instance ();
+    private PythonVersionManager python_version_manager = PythonVersionManager.get_instance ();
 
     Gtk.Clipboard clipboard = Gtk.Clipboard.get (Gdk.SELECTION_CLIPBOARD);
     Gtk.Button start_button = new Gtk.Button.from_icon_name ("media-playback-start-symbolic");
@@ -27,8 +27,8 @@ public class HeaderBar : Gtk.HeaderBar {
 
         generate_versions_dropdown ();
 
-        if (settings.get_string ("php-version") == "" && php_version_manager.get_versions ().length != 0) {
-            settings.set_string ("php-version", php_version_manager.get_versions ()[0]);
+        if (settings.get_string ("python-version") == "" && python_version_manager.get_versions ().length != 0) {
+            settings.set_string ("python-version", python_version_manager.get_versions ()[0]);
         }
 
         get_active_dropdown_index_and_set ();
@@ -59,10 +59,10 @@ public class HeaderBar : Gtk.HeaderBar {
     private void generate_versions_dropdown () {
         Gtk.ListStore liststore = new Gtk.ListStore (1, typeof (string));
 
-        for (int i = 0; i < php_version_manager.get_versions ().length; i++) {
+        for (int i = 0; i < python_version_manager.get_versions ().length; i++) {
             Gtk.TreeIter iter;
             liststore.append (out iter);
-            liststore.set (iter, Column.VERSION, php_version_manager.get_versions ()[i]);
+            liststore.set (iter, Column.VERSION, python_version_manager.get_versions ()[i]);
         }
 
         Gtk.CellRendererText cell = new Gtk.CellRendererText ();
@@ -75,12 +75,12 @@ public class HeaderBar : Gtk.HeaderBar {
     }
 
     void item_changed (Gtk.ComboBox combo) {
-        settings.set_string ("php-version", php_version_manager.get_versions () [combo.get_active ()]);
+        settings.set_string ("python-version", python_version_manager.get_versions () [combo.get_active ()]);
     }
 
     private void get_active_dropdown_index_and_set () {
-        for (int i = 0; i < php_version_manager.get_versions ().length; i++) {
-            if (php_version_manager.get_versions ()[i] == settings.get_string ("php-version")) {
+        for (int i = 0; i < python_version_manager.get_versions ().length; i++) {
+            if (python_version_manager.get_versions ()[i] == settings.get_string ("python-version")) {
                 combo_box.set_active (i);
             }
         }

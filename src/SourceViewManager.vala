@@ -1,9 +1,9 @@
-namespace PhpTester {
+namespace PythonTester {
 public class SourceViewManager : Object {
 
     static SourceViewManager? instance;
 
-    private Settings settings = new Settings ("com.github.bartzaalberg.php-tester");
+    private Settings settings = new Settings ("com.github.bartzaalberg.python-tester");
     public Gtk.SourceView view;
     public Gtk.SourceBuffer buffer;
     public Gtk.TextView result;
@@ -70,7 +70,7 @@ public class SourceViewManager : Object {
 
     public File get_code_test_file () {
 
-        var file = File.new_for_path ("phptest.php");
+        var file = File.new_for_path ("pythontest.python");
         if (!file.query_exists ()) {
             try {
                 file.create (FileCreateFlags.REPLACE_DESTINATION, null);

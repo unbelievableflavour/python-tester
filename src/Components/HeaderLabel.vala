@@ -1,4 +1,4 @@
-namespace PhpTester {
+namespace PythonTester {
 public class HeaderLabel : Gtk.Label {
 
     public HeaderLabel (string text) {

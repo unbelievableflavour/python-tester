@@ -1,4 +1,4 @@
-project('com.github.bartzaalberg.php-tester', 'vala', 'c')
+project('com.github.bartzaalberg.python-tester', 'vala', 'c')
 
 gnome = import('gnome')
 i18n = import('i18n')
@@ -12,7 +12,7 @@ executable(
     'src/Constants.vala',
     'src/SourceViewManager.vala',
     'src/StackManager.vala',
-    'src/PhpVersionManager.vala',
+    'src/PythonVersionManager.vala',
     'src/FileManager.vala',
     'src/Dialogs/Alert.vala',
     'src/Dialogs/Cheatsheet.vala',
@@ -20,7 +20,7 @@ executable(
     'src/Components/HeaderBar.vala',
     'src/Components/HeaderLabel.vala',
     'src/Views/StandardView.vala',
-    'src/Views/NoPhpFoundView.vala',
+    'src/Views/NoPythonFoundView.vala',
     dependencies: [
         dependency('gtk+-3.0'),
         dependency('gtksourceview-3.0'),

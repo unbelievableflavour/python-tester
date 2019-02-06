@@ -1,6 +1,6 @@
 using Granite;
 
-namespace PhpTester {
+namespace PythonTester {
 public class Alert : Object {
 
     public Alert (string title, string description) {

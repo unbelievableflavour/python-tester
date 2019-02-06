@@ -46,13 +46,13 @@ msgstr "Raccourcis clavier"
 msgid "Preferences"
 msgstr "Préférences"
 
-#: ../src/Views/NoPhpFoundView.vala:7
-msgid "No PHP versions found"
-msgstr "Pas de versions de PHP trouvées"
+#: ../src/Views/NoPythonFoundView.vala:7
+msgid "No Python versions found"
+msgstr "Pas de versions de Python trouvées"
 
-#: ../src/Views/NoPhpFoundView.vala:7
-msgid "Please install a versions of PHP and try again."
-msgstr "Veuillez installer une version de PHP et réessayer."
+#: ../src/Views/NoPythonFoundView.vala:7
+msgid "Please install a versions of Python and try again."
+msgstr "Veuillez installer une version de Python et réessayer."
 
 #: ../src/SourceViewManager.vala:44
 msgid "Result will show up here"

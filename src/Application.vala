@@ -1,6 +1,6 @@
 using Granite.Widgets;
 
-namespace PhpTester {
+namespace PythonTester {
 public class App:Granite.Application {
 
     public static MainWindow window = null;
@@ -29,11 +29,11 @@ public class App:Granite.Application {
 
         window.show_all ();
 
-        change_view_if_no_php_was_found ();
+        change_view_if_no_python_was_found ();
     }
 
     public static int main (string[] args) {
-        var app = new PhpTester.App ();
+        var app = new PythonTester.App ();
         return app.run (args);
     }
 
@@ -56,11 +56,11 @@ public class App:Granite.Application {
         }
     }
 
-    private void change_view_if_no_php_was_found () {
+    private void change_view_if_no_python_was_found () {
         var stack_manager = StackManager.get_instance ();
-        var php_version_manager = PhpVersionManager.get_instance ();
-        if (php_version_manager.no_versions_found ()) {
-            stack_manager.get_stack ().visible_child_name = "no-php-found-view";
+        var python_version_manager = PythonVersionManager.get_instance ();
+        if (python_version_manager.no_versions_found ()) {
+            stack_manager.get_stack ().visible_child_name = "no-python-found-view";
         }
     }
 }

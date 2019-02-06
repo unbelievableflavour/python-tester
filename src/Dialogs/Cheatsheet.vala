@@ -1,4 +1,4 @@
-namespace PhpTester {
+namespace PythonTester {
 public class Cheatsheet : Gtk.Dialog {
 
     private HeaderLabel general_header = new HeaderLabel (_("Cheatsheet"));

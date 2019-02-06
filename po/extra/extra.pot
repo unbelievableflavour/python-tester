@@ -17,56 +17,56 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:6
-#: data/com.github.bartzaalberg.php-tester.desktop.in:3
-msgid "PHP Tester"
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:6
+#: data/com.github.bartzaalberg.python-tester.desktop.in:3
+msgid "Python Tester"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:7
-#: data/com.github.bartzaalberg.php-tester.desktop.in:4
-msgid "Test some PHP code!"
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:7
+#: data/com.github.bartzaalberg.python-tester.desktop.in:4
+msgid "Test some Python code!"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:9
-msgid "A simple tool to test your PHP code."
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:9
+msgid "A simple tool to test your Python code."
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:10
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:10
 msgid "Features:"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:12
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:12
 msgid "Code without having to start a whole project!"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:13
-msgid "Switch PHP versions on the fly!"
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:13
+msgid "Switch Python versions on the fly!"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:14
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:14
 msgid "Copy your snippet with a simple click on a button!"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:15
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:15
 msgid "Continue where you left off last time"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:16
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:16
 msgid "Run your code with a simple shortcut! (ctrl + r)"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:16
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:16
 msgid "Choose a cool theme to code in"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.appdata.xml.in:30
+#: data/com.github.bartzaalberg.python-tester.appdata.xml.in:30
 msgid "Bart Zaalberg"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.desktop.in:6
-msgid "com.github.bartzaalberg.php-tester"
+#: data/com.github.bartzaalberg.python-tester.desktop.in:6
+msgid "com.github.bartzaalberg.python-tester"
 msgstr ""
 
-#: data/com.github.bartzaalberg.php-tester.desktop.in:11
-msgid "GUI;PHP;Development;"
+#: data/com.github.bartzaalberg.python-tester.desktop.in:11
+msgid "GUI;Python;Development;"
 msgstr ""

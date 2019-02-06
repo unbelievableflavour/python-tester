@@ -1,9 +1,9 @@
 using Granite.Widgets;
 
-namespace PhpTester {
+namespace PythonTester {
 public class FileManager : Object {
 
-    private Settings settings = new Settings ("com.github.bartzaalberg.php-tester");
+    private Settings settings = new Settings ("com.github.bartzaalberg.python-tester");
     SourceViewManager source_view_manager = SourceViewManager.get_instance ();
 
     static FileManager? instance;
@@ -34,7 +34,7 @@ public class FileManager : Object {
     }
 
     public File get_code_test_file () {
-        var file = File.new_for_path ("phptest.php");
+        var file = File.new_for_path ("pythontest.python");
 
         try {
             if (!file.query_exists ()) {
@@ -64,9 +64,6 @@ public class FileManager : Object {
                 file_as_string += line + "\n";
             }
 
-            if (file_as_string == "") {
-                file_as_string = "<?php\n";
-            }
            return file_as_string;
 
         } catch (Error e) {
@@ -80,10 +77,10 @@ public class FileManager : Object {
         string error;
         int status;
 
-        var phpversion = settings.get_string ("php-version");
+        var pythonversion = settings.get_string ("python-version");
 
         try {
-            Process.spawn_command_line_sync ("/usr/bin/" + phpversion + " phptest.php",
+            Process.spawn_command_line_sync ("/usr/bin/" + pythonversion + " pythontest.python",
             out result,
             out error,
             out status

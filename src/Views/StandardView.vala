@@ -1,6 +1,6 @@
 using Granite.Widgets;
 
-namespace PhpTester {
+namespace PythonTester {
 public class StandardView : Gtk.ScrolledWindow {
 
     private SourceViewManager source_view_manager = SourceViewManager.get_instance ();

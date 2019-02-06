@@ -1,4 +1,4 @@
-Source: com.github.bartzaalberg.php-tester
+Source: com.github.bartzaalberg.python-tester
 Section: utils
 Priority: optional
 Maintainer: Bart Zaalberg <bartzaalberg@gmail.com>
@@ -9,8 +9,8 @@ Build-Depends: meson,
                valac,
                libgtksourceview-3.0-dev
 
-Package: com.github.bartzaalberg.php-tester
+Package: com.github.bartzaalberg.python-tester
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
-Description: PHP tester
+Description: Python tester

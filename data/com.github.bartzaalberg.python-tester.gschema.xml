@@ -1,5 +1,5 @@
 <schemalist>
-  <schema id="com.github.bartzaalberg.php-tester" path="/com/github/bartzaalberg/php-tester/" gettext-domain="my-app">
+  <schema id="com.github.bartzaalberg.python-tester" path="/com/github/bartzaalberg/python-tester/" gettext-domain="my-app">
 	<key name="window-maximized" type="b">
 	  <default>false</default>
 	  <summary>Maximized</summary>
@@ -30,15 +30,15 @@
 		<summary>Preferred Font</summary>
 		<description>Set the preferred font.</description>
 	</key>
-	<key name="php-version" type="s">
+	<key name="python-version" type="s">
 		<default>''</default>
-		<summary>The PHP version you are using</summary>
-		<description>Set the preferred PHP version.</description>
+		<summary>The Python version you are using</summary>
+		<description>Set the preferred Python version.</description>
 	</key>
-	<key name="php-path" type="s">
+	<key name="python-path" type="s">
 		<default>'/usr/bin'</default>
-		<summary>The PHP path</summary>
-		<description>This path is used to search for PHP. If this path is wrong the application wont be able to operate</description>
+		<summary>The Python path</summary>
+		<description>This path is used to search for Python. If this path is wrong the application wont be able to operate</description>
 	</key>
   </schema>
 </schemalist>

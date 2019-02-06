@@ -1,63 +1,62 @@
-namespace PhpTester {
-public class PhpVersionManager : Object {
+namespace PythonTester {
+public class PythonVersionManager : Object {
 
-    static PhpVersionManager? instance;
-    private Settings settings = new Settings ("com.github.bartzaalberg.php-tester");
-    string[] php_versions = {};
+    static PythonVersionManager? instance;
+    private Settings settings = new Settings ("com.github.bartzaalberg.python-tester");
+    string[] python_versions = {};
 
-    PhpVersionManager () {
-        get_php_versions ();
+    PythonVersionManager () {
+        get_python_versions ();
     }
 
-    public static PhpVersionManager get_instance () {
+    public static PythonVersionManager get_instance () {
         if (instance == null) {
-            instance = new PhpVersionManager ();
+            instance = new PythonVersionManager ();
         }
         return instance;
     }
 
-    private void get_php_versions () {
+    private void get_python_versions () {
         try {
-            string directory = settings.get_string ("php-path");
+            string directory = settings.get_string ("python-path");
 
             if (directory == "") {
                 directory = "/usr/bin";
-                settings.set_string ("php-path", directory);
+                settings.set_string ("python-path", directory);
             }
 
             Dir dir = Dir.open (directory, 0);
             string? name = null;
             while ((name = dir.read_name ()) != null) {
                 string path = Path.build_filename (directory, name);
-
                 if (!(FileUtils.test (path, FileTest.IS_EXECUTABLE))) {
                     continue;
                 }
 
-                if (!("php" in name)) {
+                if (!("python" in name)) {
                     continue;
                 }
 
-                if ((name.substring (0, 3) != "php")) {
+                if ((name.substring (0, 6) != "python")) {
                     continue;
                 }
 
-                if (name != "php" && !fourth_char_is_number (name)) {
+                if (name != "python" && !fourth_char_is_number (name)) {
                     continue;
                 }
 
                 string short_string = name.substring (-3);
                 int number = int.parse (short_string);
 
-                if (name != "php" && number == 0) {
+                if (name != "python" && number == 0) {
                     continue;
                 }
 
-                php_versions += name;
+                python_versions += name;
             }
 
             if ( !current_saved_version_is_available ()) {
-                settings.set_string ("php-version", php_versions[0]);
+                settings.set_string ("python-version", python_versions[0]);
             }
 
         } catch (FileError err) {
@@ -69,14 +68,14 @@ public class PhpVersionManager : Object {
         if (no_versions_found ()) {
             return false;
         }
-        if (!(settings.get_string ("php-version") in php_versions)) {
+        if (!(settings.get_string ("python-version") in python_versions)) {
             return true;
         }
         return true;
     }
 
     public string[] get_versions () {
-        return this.php_versions;
+        return this.python_versions;
     }
 
     public bool no_versions_found () {

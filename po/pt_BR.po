@@ -47,13 +47,13 @@ msgstr "Atalhos de Marcação"
 msgid "Preferences"
 msgstr "Preferências"
 
-#: ../src/Views/NoPhpFoundView.vala:7
-msgid "No PHP versions found"
-msgstr "Nenhuma versão do PHP encontrada"
+#: ../src/Views/NoPythonFoundView.vala:7
+msgid "No Python versions found"
+msgstr "Nenhuma versão do Python encontrada"
 
-#: ../src/Views/NoPhpFoundView.vala:7
-msgid "Please install a versions of PHP and try again."
-msgstr "Por favor, instale uma versão do PHP e tente novamente."
+#: ../src/Views/NoPythonFoundView.vala:7
+msgid "Please install a versions of Python and try again."
+msgstr "Por favor, instale uma versão do Python e tente novamente."
 
 #: ../src/SourceViewManager.vala:44
 msgid "Result will show up here"

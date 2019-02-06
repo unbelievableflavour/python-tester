@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the com.github.bartzaalberg.php-tester package.
+# This file is distributed under the same license as the com.github.bartzaalberg.python-tester package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: com.github.bartzaalberg.php-tester\n"
+"Project-Id-Version: com.github.bartzaalberg.python-tester\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-26 23:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -63,15 +63,15 @@ msgid "Theme:"
 msgstr ""
 
 #: src/Dialogs/Preferences.vala:32
-msgid "PHP path:"
+msgid "Python path:"
 msgstr ""
 
 #: src/Dialogs/Preferences.vala:35
-msgid "This path will be used to find php"
+msgid "This path will be used to find python"
 msgstr ""
 
 #: src/Dialogs/Preferences.vala:37
-msgid "You need to restart after changing the PHP path"
+msgid "You need to restart after changing the Python path"
 msgstr ""
 
 #: src/Dialogs/Preferences.vala:45
@@ -98,10 +98,10 @@ msgstr ""
 msgid "Markdown Cheatsheet"
 msgstr ""
 
-#: src/Views/NoPhpFoundView.vala:8
-msgid "No PHP versions found"
+#: src/Views/NoPythonFoundView.vala:8
+msgid "No Python versions found"
 msgstr ""
 
-#: src/Views/NoPhpFoundView.vala:9
-msgid "Please install a versions of PHP and restart the application."
+#: src/Views/NoPythonFoundView.vala:9
+msgid "Please install a versions of Python and restart the application."
 msgstr ""
