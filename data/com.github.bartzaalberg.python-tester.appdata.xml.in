@@ -50,6 +50,14 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
+    <release version="1.0.0" date="2019-02-06">
+      <description>
+        <p>First release</p>
+        <ul>
+          <li>First release</li>
+        </ul>
+      </description>
+    </release>
   </releases>
   <screenshots>
     <screenshot type="default">

@@ -15,7 +15,7 @@ Test your Python code easily
 
 ### Python code without a server!
 
-A Vala application to test Python snippets without having to start a server.
+A Vala application to test Python snippets without the hassle.
 
 ## Installation
 
