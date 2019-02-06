@@ -11,10 +11,7 @@ public class SourceViewManager : Object {
     SourceViewManager () {
         try {
             var file = this.get_code_test_file ();
-            var info = file.query_info ("standard::*", FileQueryInfoFlags.NONE, null);
-            var mime_type = ContentType.get_mime_type (
-                info.get_attribute_as_string (FileAttribute.STANDARD_CONTENT_TYPE)
-            );
+            var mime_type = "text/x-python";
 
             buffer = new Gtk.SourceBuffer (null);
             buffer.highlight_syntax = true;
