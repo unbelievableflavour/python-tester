@@ -1,3 +1,9 @@
+com.github.bartzaalberg.python-tester (1.0.1) UNSTABLE; urgency=low
+
+  * Added higher contrast text color
+
+ -- Bart Zaalberg <bartzaalberg@gmail.com>  Thu, 07 Feb 2019 17:10:00 +0200
+
 com.github.bartzaalberg.python-tester (1.0.0) UNSTABLE; urgency=low
 
   * First release
