@@ -5,6 +5,12 @@ i18n = import('i18n')
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
+asresources = gnome.compile_resources(
+    'as-resources', 'data/app.gresource.xml',
+    source_dir: 'data',
+    c_name: 'as'
+)
+
 executable(
     meson.project_name(),
     'src/Application.vala',
@@ -21,6 +27,7 @@ executable(
     'src/Components/HeaderLabel.vala',
     'src/Views/StandardView.vala',
     'src/Views/NoPythonFoundView.vala',
+    asresources,
     dependencies: [
         dependency('gtk+-3.0'),
         dependency('gtksourceview-3.0'),

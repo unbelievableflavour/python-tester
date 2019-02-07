@@ -23,6 +23,14 @@ public class App:Granite.Application {
             return;
         }
 
+        var provider = new Gtk.CssProvider ();
+        provider.load_from_resource ("/com/github/bartzaalberg/python-tester/application.css");
+        Gtk.StyleContext.add_provider_for_screen (
+            Gdk.Screen.get_default (),
+            provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+        );
+
         window = new MainWindow (this);
         go_to_last_saved_position (window);
         go_to_last_saved_size (window);
