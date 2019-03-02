@@ -13,7 +13,7 @@ Test your Python code easily
     src="https://raw.githubusercontent.com/bartzaalberg/python-tester/master/screenshot.png" />
 </p>
 
-### Python code without a server!
+### Python code without the hassle!
 
 A Vala application to test Python snippets without the hassle.
 
